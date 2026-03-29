@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-stac"
+version = "0.1.0"
+description = "AI Agents for SpatioTemporal Asset Catalogs (STAC)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Qiusheng Wu", email = "giswqs@gmail.com" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dynamic = ["dependencies"]
+
+[project.scripts]
+agentic-stac = "agentic_stac.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/opengeos/agentic-stac"
+Repository = "https://github.com/opengeos/agentic-stac"
+Issues = "https://github.com/opengeos/agentic-stac/issues"
+
+[tool.setuptools.packages.find]
+include = ["agentic_stac*"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }

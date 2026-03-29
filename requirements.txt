@@ -1,0 +1,4 @@
+click
+litellm
+pystac-client
+requests
